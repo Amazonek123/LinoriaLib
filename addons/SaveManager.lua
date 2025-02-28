@@ -91,7 +91,7 @@ local SaveManager = {} do
 
 		for idx, toggle in next, Toggles do
 			if self.Ignore[idx] then continue end
-
+			warn(self.Parser[toggle.Type], toggle.Type, toggle)
 			table.insert(data.objects, self.Parser[toggle.Type].Save(idx, toggle))
 		end
 
